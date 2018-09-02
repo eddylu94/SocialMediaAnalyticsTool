@@ -1,2 +1,1 @@
-# SocialMediaAnalyticsTool
-See who unfollowed you
+# Social Media Analytics Tool
