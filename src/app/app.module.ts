@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { TabPaneModule } from './../tabpane/tabpane.module';
+import { MenuListModule } from './../menulist/menulist.module';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -8,7 +10,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    TabPaneModule,
+    MenuListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
