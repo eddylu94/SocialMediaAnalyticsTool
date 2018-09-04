@@ -1,4 +1,5 @@
-import { Component, Input, SimpleChange } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { SocialMediaPlatform, getSocialMediaPlatformString } from './../SocialMediaPlatforms';
 
 @Component({
   selector: 'tab-pane',
@@ -6,7 +7,9 @@ import { Component, Input, SimpleChange } from '@angular/core';
   styleUrls: ['./tabpane.component.css']
 })
 export class TabPaneComponent {
-  @Input() selectedTab: string;
+  @Input() selectedTab: SocialMediaPlatform;
 
   title = 'TabPaneComponent';
+  
+  getTitle = getSocialMediaPlatformString;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SocialMediaPlatform, getSocialMediaPlatformString } from './../SocialMediaPlatforms';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AppComponent';
-  selectedTab: string = "Home";
-
-  
+  selectedTab: SocialMediaPlatform = SocialMediaPlatform.HOME;  
 }

@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { SocialMediaPlatform, getSocialMediaPlatformString } from './../SocialMediaPlatforms';
 
 @Component({
   selector: 'menu-list',
@@ -10,7 +11,24 @@ export class MenuListComponent {
   @Output() selectedTabChange = new EventEmitter<string>();
 
   title = 'MenuListComponent';
-  menuItems = ["Home", "Item1", "Item2"];
+  menuItems = [
+    {
+      id: SocialMediaPlatform.HOME,
+      title: getSocialMediaPlatformString(SocialMediaPlatform.HOME)
+    },
+    {
+      id: SocialMediaPlatform.FACEBOOK,
+      title: getSocialMediaPlatformString(SocialMediaPlatform.FACEBOOK)
+    },
+    {
+      id: SocialMediaPlatform.INSTAGRAM,
+      title: getSocialMediaPlatformString(SocialMediaPlatform.INSTAGRAM)
+    },
+    {
+      id: SocialMediaPlatform.TWITTER,
+      title: getSocialMediaPlatformString(SocialMediaPlatform.TWITTER)
+    },
+  ];
 
   updateSelectedTab(tab) {
     this.selectedTabChange.emit(tab)
