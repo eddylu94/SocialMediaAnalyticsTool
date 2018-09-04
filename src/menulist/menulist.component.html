@@ -1,8 +1,7 @@
 <div>
   <ul>
     <li *ngFor="let item of menuItems">
-      <a href="">{{item}}</a>
+      <a href="#" (click)="updateSelectedTab(item)">{{item}}</a>
     </li>
   </ul>
-  <div ng-transclude></div>
 </div>
